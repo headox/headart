@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10131d">
+<title>FF Headshot Sensitivity Generator</title>
+<style>
+:root{--bg:#0c0f17;--panel:#151a27;--panel2:#1d2434;--text:#f5f7ff;--muted:#a8b0c5;--accent:#ffb21c;--accent2:#ff5b35;--line:#30394d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#332218 0,transparent 32%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:760px;margin:auto;padding:22px 15px 40px}.hero{text-align:center;padding:18px 5px 24px}.brand-mark{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;background:linear-gradient(145deg,#202638,#10131d);border:1px solid #536078;clip-path:polygon(8% 0,100% 0,100% 75%,91% 100%,0 100%,0 20%);box-shadow:0 0 0 3px #0b0e15,0 0 24px #ff9f1a26;transform:skewX(-3deg)}.brand-emblem{position:relative;width:52px;height:52px;display:grid;place-items:center;background:linear-gradient(145deg,#ffd66b,#ff781f);clip-path:polygon(20% 0,100% 0,82% 100%,0 100%,0 24%);color:#11131a;font-size:37px;font-weight:1000;font-style:italic;text-shadow:2px 2px 0 #fff4}.brand-emblem i{position:absolute;right:4px;bottom:7px;width:17px;height:5px;background:#151925;transform:skewX(-25deg)}.brand-word{display:flex;flex-direction:column;align-items:flex-start;line-height:1}.brand-word strong{font-size:clamp(29px,7vw,40px);font-weight:1000;font-style:italic;letter-spacing:-1.8px;color:#f7f8ff;text-shadow:3px 3px 0 #090b11}.brand-word strong span{color:var(--accent)}.brand-word small{margin-top:6px;font-size:9px;font-weight:900;letter-spacing:2.1px;color:#b7c0d4}.hero h1{font-size:clamp(27px,7vw,43px);line-height:1.08;margin:16px 0 10px}.hero h1 span{color:var(--accent)}.hero p{margin:0 auto;max-width:520px;color:var(--muted);line-height:1.6}.card{background:linear-gradient(160deg,var(--panel),#111520);border:1px solid var(--line);border-radius:20px;padding:18px;margin:14px 0;box-shadow:0 12px 30px #0002}.card h2{font-size:18px;margin:0 0 15px}.field{margin:13px 0}.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:7px}.field input,.field select{width:100%;background:#0e121c;border:1px solid #39445c;border-radius:12px;color:var(--text);padding:13px;font-size:16px;outline:none}.field input:focus,.field select:focus{border-color:var(--accent)}.ram-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.ram{border:1px solid #39445c;background:#0e121c;color:var(--text);padding:12px 5px;border-radius:12px;font-weight:700;cursor:pointer}.ram.active{border-color:var(--accent);background:#382a12;color:#ffd27b}.hint{font-size:12px;color:var(--muted);line-height:1.5}.drag-area{position:relative;height:210px;overflow:hidden;border:1px dashed #68738b;border-radius:16px;background:radial-gradient(circle at center,#222d43,#0d111b 75%);touch-action:none;user-select:none;cursor:crosshair}.drag-area:before,.drag-area:after{content:"";position:absolute;background:#ffffff0b}.drag-area:before{width:1px;height:100%;left:50%}.drag-area:after{height:1px;width:100%;top:50%}.drag-instructions{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;pointer-events:none;color:#c7cee0}.target{font-size:34px;color:var(--accent)}.drag-dot{position:absolute;width:18px;height:18px;border-radius:50%;background:var(--accent);border:3px solid white;box-shadow:0 0 18px #ffb21c;transform:translate(-50%,-50%);pointer-events:none;display:none}.drag-stat{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:13px;color:var(--muted)}.drag-stat strong{color:var(--accent)}.btn{width:100%;border:0;border-radius:13px;padding:15px;font-weight:900;font-size:16px;cursor:pointer;background:linear-gradient(90deg,var(--accent),#ff7a24);color:#17120a;margin-top:8px}.btn.secondary{background:#222a3b;color:var(--text);border:1px solid #3b465d}.results{display:none}.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.result{background:var(--panel2);border:1px solid #30394d;border-radius:13px;padding:13px}.result span{display:block;color:var(--muted);font-size:13px}.result strong{display:block;font-size:27px;color:var(--accent);margin-top:3px}.result small{color:var(--muted)}.notice{background:#201b12;border:1px solid #584522;border-radius:12px;padding:12px;color:#f0d8a5;font-size:12px;line-height:1.5;margin-top:13px}footer{text-align:center;color:#818aa0;font-size:12px;padding:15px 0} @media(min-width:600px){.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="brand-mark" aria-label="HEADART esports logo">
+      <div class="brand-emblem"><span>H</span><i></i></div>
+      <div class="brand-word"><strong>HEAD<span>ART</span></strong><small>ESPORTS SENSITIVITY LAB</small></div>
+    </div>
+    <h1>HEADSHOT <span>SENSITIVITY</span></h1>
+    <p>Build a personalized starting setup for your phone, RAM and drag style.</p>
+  </header>
+  <section class="card">
+    <h2>01 / Your device</h2>
+    <div class="field"><label for="phone">Phone brand and model</label><input id="phone" maxlength="70" placeholder="e.g. Redmi Note 10" autocomplete="off"></div>
+    <div class="field">
+      <label>Choose your RAM</label>
+      <div class="ram-grid" id="ramGrid">
+        <button class="ram" data-ram="2">2 GB</button><button class="ram" data-ram="3">3 GB</button><button class="ram active" data-ram="4">4 GB</button><button class="ram" data-ram="6">6 GB</button><button class="ram" data-ram="8">8 GB</button><button class="ram" data-ram="12">12 GB+</button>
+      </div>
+      <p class="hint">Select the RAM installed in your phone. These are estimates, not official game settings.</p>
+    </div>
+  </section>
+  <section class="card">
+    <h2>02 / Drag test</h2>
+    <p class="hint">Swipe inside the box as you would drag upward to aim. Try a few swipes. Your longest upward drag helps tune the suggestion.</p>
+    <div class="drag-area" id="dragArea" aria-label="Swipe here to test your drag">
+      <div class="drag-instructions" id="dragInstructions"><div class="target">◎</div><strong>SWIPE UP HERE</strong><span class="hint">Touch and drag upward</span></div>
+      <div class="drag-dot" id="dragDot"></div>
+    </div>
+    <div class="drag-stat"><span>Last upward swipe: <strong id="lastSwipe">Not tested</strong></span><span>Drag style: <strong id="dragStyle">Balanced</strong></span></div>
+    <p class="hint">No touch data leaves this page. The swipe is only used to estimate a starting preference.</p>
+  </section>
+  <button class="btn" id="generate">GENERATE MY SENSITIVITY</button>
+  <section class="card results" id="results" aria-live="polite">
+    <h2>03 / Your starting settings</h2>
+    <p class="hint" id="deviceSummary"></p>
+    <div class="result-grid" id="resultGrid"></div>
+    <div class="notice">These are community-style starting values on a 0–200 scale, not guaranteed headshot settings. Test in Training Ground and adjust gradually for your screen size, FPS, DPI and personal control.</div>
+    <button class="btn" id="copy">COPY SETTINGS</button>
+    <button class="btn secondary" id="again">RESET DRAG TEST</button>
+    <p class="hint" id="copyStatus" role="status"></p>
+  </section>
+  <footer>Fan-made helper • Not affiliated with Garena or Free Fire. No game files or accounts are accessed.</footer>
+</main>
+<script>
+const ramButtons=[...document.querySelectorAll('.ram')];
+let ram=4, swipes=[], start=null, lastY=null, longest=0;
+ramButtons.forEach(btn=>btn.addEventListener('click',()=>{ram=Number(btn.dataset.ram);ramButtons.forEach(b=>b.classList.toggle('active',b===btn));}));
+const area=document.getElementById('dragArea'), dot=document.getElementById('dragDot');
+function point(e){const r=area.getBoundingClientRect();return {x:e.clientX-r.left,y:e.clientY-r.top};}
+area.addEventListener('pointerdown',e=>{e.preventDefault();area.setPointerCapture(e.pointerId);start=point(e);lastY=start.y;dot.style.display='block';dot.style.left=start.x+'px';dot.style.top=start.y+'px';document.getElementById('dragInstructions').style.opacity='.25';});
+area.addEventListener('pointermove',e=>{if(!start)return;const p=point(e);dot.style.left=p.x+'px';dot.style.top=p.y+'px';});
+function endDrag(e){if(!start)return;const p=point(e);const upward=Math.max(0,start.y-p.y);const distance=Math.hypot(start.x-p.x,start.y-p.y);if(distance>12){swipes.push(upward);if(swipes.length>12)swipes.shift();longest=Math.max(...swipes);document.getElementById('lastSwipe').textContent=Math.round(upward)+' px';let style=upward>area.clientHeight*.48?'Fast':upward>area.clientHeight*.22?'Balanced':'Short';document.getElementById('dragStyle').textContent=style;}start=null;}
+area.addEventListener('pointerup',endDrag);area.addEventListener('pointercancel',endDrag);
+function generate(){
+ const phone=document.getElementById('phone').value.trim()||'Your phone';
+ const avg=swipes.length?swipes.reduce((a,b)=>a+b,0)/swipes.length:area.clientHeight*.32;
+ const ratio=Math.min(1,avg/area.clientHeight);
+ // Simple transparent heuristic: RAM affects only the small performance-oriented starting adjustment.
+ let base=ratio>.48?184:ratio>.25?174:164;
+ if(ram<=3)base-=4; else if(ram>=8)base+=2;
+ const clamp=n=>Math.max(0,Math.min(200,Math.round(n)));
+ const vals=[
+  ['General',clamp(base)],['Red Dot',clamp(base-8)],['2× Scope',clamp(base-20)],
+  ['4× Scope',clamp(base-34)],['Sniper Scope',clamp(base-68)],['Free Look',clamp(base-14)]
+ ];
+ document.getElementById('deviceSummary').textContent=`Device: ${phone} • RAM: ${ram===12?'12 GB+':ram+' GB'} • Drag style: ${document.getElementById('dragStyle').textContent}`;
+ document.getElementById('resultGrid').innerHTML=vals.map(([name,val])=>`<div class="result"><span>${name}</span><strong>${val}</strong><small>/ 200</small></div>`).join('');
+ document.getElementById('results').style.display='block';document.getElementById('copyStatus').textContent='';
+ document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.getElementById('generate').addEventListener('click',generate);
+document.getElementById('copy').addEventListener('click',async()=>{
+ const values=[...document.querySelectorAll('.result')].map(el=>`${el.querySelector('span').textContent}: ${el.querySelector('strong').textContent}`).join('\n');
+ const text=`Free Fire sensitivity starting settings\n${document.getElementById('deviceSummary').textContent}\n${values}\nNote: test and adjust in Training Ground.`;
+ try{await navigator.clipboard.writeText(text);document.getElementById('copyStatus').textContent='Copied!';}
+ catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();document.getElementById('copyStatus').textContent=ok?'Copied!':'Copy unavailable on this browser. Select and copy the values manually.';}
+});
+document.getElementById('again').addEventListener('click',()=>{swipes=[];longest=0;document.getElementById('lastSwipe').textContent='Not tested';document.getElementById('dragStyle').textContent='Balanced';dot.style.display='none';document.getElementById('dragInstructions').style.opacity='1';document.getElementById('results').style.display='none';area.scrollIntoView({behavior:'smooth',block:'center'});});
+</script>
+</body>
+</html>
